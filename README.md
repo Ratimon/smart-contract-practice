@@ -8,13 +8,13 @@ Write a simple contract in Solidity that keeps in the blockchain an integer vari
 
 Write a Solidiy contract, as described below:
 - The contract holds a certain value
-⋅⋅* value(uint) -> not accessible outside the contract
+    * value(uint) -> not accessible outside the contract
 - Anyone can see the function and read the value o ReyusnsuintProblem 
-⋅⋅* Returns uint
-⋅⋅* Not modifying the state of blockchain!
+    * Returns uint
+    * Not modifying the state of blockchain!
 - Anyone can increment the value
-⋅⋅* increment(uint delta)
-⋅⋅* No output!
+    * increment(uint delta)
+    * No output!
 - Test and play around with the contract
 
 ## Problem3. Previous Invoker
@@ -22,10 +22,10 @@ Write a Solidiy contract, as described below:
 Write a Solidity contract as described below:
 
 - Keep the address of its previous invoker in the persistent storage -> not accessible outside the contract
-⋅⋅* getLastInvoker() à returns (bool, address)
-⋅⋅* true / false – if a previous invoker exists or not
-⋅⋅* The address that has invoked the contract before you
-⋅⋅* Accessible from outside the contract
+    * getLastInvoker() à returns (bool, address)
+    * true / false – if a previous invoker exists or not
+    * The address that has invoked the contract before you
+    * Accessible from outside the contract
 
 Add appropriate events for the functions
 
@@ -53,8 +53,8 @@ Write a contract that represents a simple token
     *  This amount must be allocated to the address that creates the contract
 - You should store the balances of the addresses -> mapping
 - Add a functionality that allows for transfer(to, value) of tokens between the address of the contract’s creator and other addresses
-⋅⋅* The number of tokens for transfer must be bigger than 0
-⋅⋅* Check for overflow
+    * The number of tokens for transfer must be bigger than 0
+    * Check for overflow
 
 Add appropriate events for the functions
 Test and play around with the contract
@@ -67,13 +67,13 @@ Create a Diary contract in Solidity which:
 
 -  Keep in the blockchain a string array of facts and the contract owner
 -  Only contract owner (creator) can
-⋅⋅* Add facts (string fact) -> accessible outside the contract
+    * Add facts (string fact) -> accessible outside the contract
 - Only people who are approved can read the facts
-⋅⋅* getFact(index) – returns specified fact by index [0…count-1]
-⋅⋅* Solidity cannot return all facts at once (array of strings)
-⋅⋅* Approved addresses are hardcoded in the contract
+    * getFact(index) – returns specified fact by index [0…count-1]
+    * Solidity cannot return all facts at once (array of strings)
+    * Approved addresses are hardcoded in the contract
 - Everyone can see how many facts there are in the diary
-⋅⋅* count() – returns the count of facts -> not change the state of the contract
+    * count() – returns the count of facts -> not change the state of the contract
 - Nobody can delete facts or destroy the contract            
 
 Use modifiers where it is appropriate.
@@ -102,8 +102,8 @@ In the first Blockchain Secondary School every lecturer should store the student
 Write a simple contract in Solidity that keeps track of students’ names, addresses(eth), array of marks and number in class:
 
 -  Only the owner of the contract (lecturer) can create students profile and give marks it does not matter the class/lecture (should be store in appropriate data structure)
-⋅⋅* Hint -> use struct
-⋅⋅* Students profile should be stored in an array -> Students[]
+    * Hint -> use struct
+    * Students profile should be stored in an array -> Students[]
 -  Everyone can get the information -> get(index)
 
 Use modifiers where it is appropriate.
@@ -117,7 +117,7 @@ Create a Deposit contract which:
 -  People can deposit ethers in the contract
 -  People can get the balance of the contract
 -  Owner can send amount
-⋅⋅* Upon sending, the contract self-destructs with the total amount in the contract
+    * Upon sending, the contract self-destructs with the total amount in the contract
 
 Use modifiers where it is appropriate.
 Add appropriate events for the functions.
@@ -138,10 +138,10 @@ Write a contract that inherits SafeMath and Owned and uses their methods
 
 -  The contract should hold one int256 state variable
 -  Has a method to change the state variable automatically by these rules:
-⋅⋅* Method is called by the owner
-⋅⋅* The state is incremented by now % 256
-⋅⋅* The state is multiplied by the amount of seconds since the last state change (initially 1)
-⋅⋅* The current block gas limit is subtracted from the state
+    * Method is called by the owner
+    * The state is incremented by now % 256
+    * The state is multiplied by the amount of seconds since the last state change (initially 1)
+    * The current block gas limit is subtracted from the state
 
 ## Problem11. Simple Bank
 Create a simple Bank contract which:
@@ -149,13 +149,13 @@ Create a simple Bank contract which:
 -  holds balances of users
 -  holds the owner of the contract
 -  function deposit – user deposits ether to the bank
-⋅⋅* method must be payable
-⋅⋅* use require to validate corner cases (e.g. overflow)
-⋅⋅* return the balance of the user
+    * method must be payable
+    * use require to validate corner cases (e.g. overflow)
+    * return the balance of the user
 -  function withdraw(amount) – user withdraws ether from the bank
-⋅⋅* use require to validate corner cases
-⋅⋅* use msg.sender.transfer
-⋅⋅* return the new balance of the user
+    * use require to validate corner cases
+    * use msg.sender.transfer
+    * return the new balance of the user
 -  unction getBalance – returns the caller's balance
 
 Use modifiers where it is appropriate.
@@ -188,9 +188,9 @@ Create a Capitol contract which:
 
 -  adds person by age and gender (hint: use struct for storing the person)
 -  chooses one girl and one boy:
-⋅⋅* you are not allowed to choose the two people from the same gender
-⋅⋅*  they should be between 12 and 18 years old
-⋅⋅*  they should be chosen by random function (you can use block.timestamp but it is not safe or oraclize -> learn more about it from oraclize documentation)
+    * you are not allowed to choose the two people from the same gender
+    *  they should be between 12 and 18 years old
+    *  they should be chosen by random function (you can use block.timestamp but it is not safe or oraclize -> learn more about it from oraclize documentation)
 -  you can check how many girls and boys are added -> returns a positive number
 -  after choosing the pair (boy and girl) set the start date of the hunger games and the end date (the hunger games should last 5 minutes)
 -  after the end of the hunger game, check if the boy and girl are alive (use random 0 - dead, 1 - alive, use modifier for checking if the hunger game ended)    
@@ -218,12 +218,12 @@ Create a contract called PetSanctuary that has:
 
 -  function add (animalKind, howManyPieces) – only the owner can give shelter to animals in the sanctuary
 -  function buy (personAge, personGender, animalKind)
-⋅⋅*  save when the animal is bought
-⋅⋅*  you can only adopt one animal for lifetime
-⋅⋅*  Men can only buy dog and fish
-⋅⋅*  Women can buy from every kind, but if they are under 40, they are not allowed to buy a cat
-⋅⋅*  function giveBackAnimal(animalKind)
-⋅⋅*  you can give the animal back in the first 5 minutes after adoption
+    *  save when the animal is bought
+    *  you can only adopt one animal for lifetime
+    *  Men can only buy dog and fish
+    *  Women can buy from every kind, but if they are under 40, they are not allowed to buy a cat
+    *  function giveBackAnimal(animalKind)
+    *  you can give the animal back in the first 5 minutes after adoption
 -  Think about how to store people’s information in the contract.
 
 Use modifiers where it is appropriate.

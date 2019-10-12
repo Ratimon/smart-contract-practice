@@ -50,7 +50,7 @@ Test and play around with the contract
 Write a contract that represents a simple token
 
 - The initial supply must be set at contract’s creation
-⋅⋅* This amount must be allocated to the address that creates the contract
+    *  This amount must be allocated to the address that creates the contract
 - You should store the balances of the addresses -> mapping
 - Add a functionality that allows for transfer(to, value) of tokens between the address of the contract’s creator and other addresses
 ⋅⋅* The number of tokens for transfer must be bigger than 0

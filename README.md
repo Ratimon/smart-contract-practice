@@ -161,7 +161,7 @@ Create a simple Bank contract which:
 Use modifiers where it is appropriate.
 Add appropriate events for the functions.
 
-## Problem12. A Simple Timed Auction
+## Problem12-1. A Simple Timed Auction
 Write a  contract for an auction, which continues for 1 minute after the contract is deploye. Use block.timestamp as a start time.
 
 Contract stores:
@@ -176,10 +176,10 @@ Contract stores:
 Use modifiers where it is appropriate.
 Add appropriate events for the functions.
 
-## Problem13.  A Simple Timed Auction (2)
+## Problem12-2.  A Simple Timed Auction (2)
 Write a contract for an auction, which continues for 1 block after contract's creation.
 
-## Problem14.  Hunger Games
+## Problem13.  Hunger Games
 Every year, in the ruins of what was once North America, the Capitol of the nation of Panem - a technologically advanced, utopian city where the nation's most wealthy and powerful citizens live, forces each of its 12 districts to send a teenage boy and a girl, between the ages of 12 and 18, to compete in the Hunger Games: a nationally televised event in which 'tributes' fight each other within an arena, until one survivor remains.
 
 This time of the year has come and it’s time for the 100th hunger game where you should send the new pair of teenage boy and girl.
@@ -200,7 +200,7 @@ Add appropriate events for the functions.
 Test and play around with the contract!
 
 
-## Problem15.  Pet Adoption
+## Problem14.  Pet Adoption
 
 In our adoption sanctuary, we have 5 kinds of animals
 

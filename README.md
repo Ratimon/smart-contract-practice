@@ -23,7 +23,7 @@ Write a Solidiy contract, as described below:
 Write a Solidity contract as described below:
 
 - Keep the address of its previous invoker in the persistent storage -> not accessible outside the contract
-  - getLastInvoker() à returns (bool, address)
+  - getLastInvoker() returns (bool, address)
   - true / false – if a previous invoker exists or not
   - The address that has invoked the contract before you
   - Accessible from outside the contract
